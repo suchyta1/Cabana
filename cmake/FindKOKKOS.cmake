@@ -22,6 +22,10 @@ find_package_handle_standard_args(KOKKOS DEFAULT_MSG KOKKOS_SETTINGS_DIR KOKKOS_
 
 mark_as_advanced(KOKKOS_SETTINGS_DIR KOKKOS_INCLUDE_DIR KOKKOS_LIBRARY)
 
+message(STATUS "${KOKKOS_SETTINGS_DIR}")
+message(STATUS "${KOKKOS_INCLUDE_DIR}")
+message(STATUS "${KOKKOS_LIBRARY}")
+
 if(KOKKOS_SETTINGS_DIR AND KOKKOS_INCLUDE_DIR AND KOKKOS_LIBRARY)
   include(${KOKKOS_SETTINGS_DIR}/kokkos_generated_settings.cmake)
   # https://github.com/kokkos/kokkos/issues/1838
